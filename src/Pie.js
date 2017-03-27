@@ -111,8 +111,8 @@ export default class PieChart extends Component {
                 fontStyle={textStyle.fontStyle}
                 fill={textStyle.fill}
                 textAnchor="middle"
-                x={x-2}
-                y={y - R + ((R-r)/2)}>{item.name}</Text>
+                x={x}
+                y={y - R + ((R-r)/2) + 5}>{item.name}</Text>
         </G>
       )
     }
