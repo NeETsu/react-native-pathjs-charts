@@ -122,7 +122,7 @@ export default class PieChart extends Component {
         let stroke = typeof fill === 'string' ? fill : Colors.darkenColor(fill)
         return (
                   <G key={ i } x={x} y={y}>
-                      <Path d={c.sector.path.print() } stroke={stroke} fill={fill} fillOpacity={1}  />
+                      <Path d={c.sector.path.print() } stroke={stroke} stroke-width="0.15" fill={fill} fillOpacity={1}  />
                       <G x={options.margin.left} y={options.margin.top}>
                         <Text fontFamily={textStyle.fontFamily}
                               fontSize={textStyle.fontSize}
