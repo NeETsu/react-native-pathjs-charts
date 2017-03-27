@@ -99,7 +99,7 @@ export default class PieChart extends Component {
     if (this.props.data.length === 1) {
       let item = this.props.data[0]
       let outerFill = (item.color && Colors.string(item.color)) || this.color(0)
-      let innerFill = this.props.monoItemInnerFillColor || '#fff'
+      let innerFill = this.props.monoItemInnerFillColor || '#F0F0F0'
       let stroke = typeof fill === 'string' ? outerFill : Colors.darkenColor(outerFill)
       slices = (
         <G>
