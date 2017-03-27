@@ -119,11 +119,11 @@ export default class PieChart extends Component {
     else {
       slices = chart.curves.map( (c, i) => {
         let fill = (c.item.color && Colors.string(c.item.color)) || this.color(i)
-        let stroke = typeof fill === 'string' ? fill : Colors.darkenColor(fill)
+        let stroke = typeof fill === 'string' ? black : Colors.darkenColor(fill)
         return (
                   <G key={ i } x={x} y={y}>
-                      <Path d={c.sector.path.print() } stroke={stroke} stroke-width="0.15" fill={fill} fillOpacity={1}  />
-                      <G x={options.margin.left} y={options.margin.top}>
+                      <Path d={c.sector.path.print() } stroke='black' stroke-width="0.15" fill={fill} fillOpacity={1}  />
+                      <G  x={options.margin.left} y={options.margin.top}>
                         <Text fontFamily={textStyle.fontFamily}
                               fontSize={textStyle.fontSize}
                               fontWeight={textStyle.fontWeight}
