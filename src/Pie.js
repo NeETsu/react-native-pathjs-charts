@@ -103,8 +103,8 @@ export default class PieChart extends Component {
       let stroke = typeof fill === 'string' ? outerFill : Colors.darkenColor(outerFill)
       slices = (
         <G>
-          <Circle r={R} cx={x} cy={y} stroke={stroke} fill={outerFill}/>
-          <Circle r={r} cx={x} cy={y} stroke={stroke} fill={innerFill}/>
+          <Circle r={R} cx={x} cy={y} stroke="white" fill={outerFill}/>
+          <Circle r={r} cx={x} cy={y} stroke="white" fill={innerFill}/>
           <Text fontFamily={textStyle.fontFamily}
                 fontSize={textStyle.fontSize}
                 fontWeight={textStyle.fontWeight}
@@ -122,7 +122,7 @@ export default class PieChart extends Component {
         //let stroke = typeof fill === 'string' ? black : Colors.darkenColor(fill)
         return (
                   <G key={ i } x={x} y={y}>
-                      <Path d={c.sector.path.print() } stroke='black' stroke-width="0.15" fill={fill} fillOpacity={1}  />
+                      <Path d={c.sector.path.print() } stroke='white' stroke-width="0.15" fill={fill} fillOpacity={1}  />
                       <G  x={options.margin.left} y={options.margin.top}>
                         <Text fontFamily={textStyle.fontFamily}
                               fontSize={textStyle.fontSize}
